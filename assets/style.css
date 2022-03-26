@@ -345,7 +345,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
   th, td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #691f1f;
   }
   th:first-child, td:first-child {
     padding-left: 0;
@@ -386,7 +386,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
     margin-top: 3rem;
     margin-bottom: 3.5rem;
     border-width: 0;
-    border-top: 1px solid #E1E1E1;
+    border-top: 1px solid #0012af;
   }
   /* Clearing –––––––––––––––––––––––––––––––––––––––––––––––––– */
   /* Self Clearing Goodness */
@@ -414,13 +414,15 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
   }
   /* Custom App CSS Below --------------------------------- */
   /* Main Layout ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-  html, body{
+  html, body{ 
     height: 100%;
   }
-  
+  .main-svg{
+    background-color: unset !important;
+  }
   body {
-    background-color: #ffffff;
-    color: #ffffff;
+    background-color:#007eff;
+    color: #000000;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -446,7 +448,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
     text-decoration: none;
   }
   .bg-grey{
-    background-color: #ffffff;
+    background-color: rgb(138, 138, 138);
   }
   .text-padding{
     padding: 5px;
@@ -485,8 +487,8 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
     padding-bottom: 12px;
   }
   .Select-control, .Select-menu-outer, .Select-multi-value-wrapper, .select-up, .is-open .Select-control {
-    background-color: #ffffff;
-    color: white;
+    background-color: #08791b;
+    color: #770077;
   
   }
   
@@ -502,7 +504,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
   }
   
   .has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label {
-    color: white;
+    color: rgb(12, 145, 0);
     background: #1E1E1E;
     background-color: #1E1E1E;
   }
@@ -512,7 +514,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
     position: relative;
   }
   .has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-labeln {
-    color: #d8d8d8;
+    color: #14005e;
     font-weight: 400;
     font-size: 14px;
   }
@@ -525,7 +527,7 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
     background-color: #1e1e1e;
     font-family: "Open Sans Light";
     font-weight: 400;
-    color: #dbdbdb;
+    color: #ddc700;
     border: 0.5px solid #dbdbdb44;
   }
   
@@ -551,18 +553,18 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
   
   .SingleDatePickerInput__withBorder {
     border-radius: 3px;
-    color: #dbdbdb;
+    color: hsl(0, 100%, 40%);
     background: #1e1e1e;
     background-color: #1e1e1e;
   }
   
   .SingleDatePickerInput.SingleDatePickerInput_1.SingleDatePickerInput__withBorder.SingleDatePickerInput__withBorder_2 {
-    border: 0.0px solid #dbdbdb;
+    border: 0.0px solid #da0000;
     display: block;
   }
   
   .SingleDatePicker_1 {
-    border: 0.0px solid #dbdbdb;
+    border: 0.0px solid #a1c500;
     display: block;
   }
   
@@ -630,5 +632,5 @@ Taken from https://codepen.io/chriddyp/pen/bWLwgP.css
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #d8d8d870 !important;
+    background: #ee000070 !important;
   }

@@ -36,6 +36,18 @@ fig_employee.update_traces(texttemplate='%{text:.2s}', textposition='outside')
 fig_employee.update_layout(uniformtext_minsize=8, uniformtext_mode='hide', xaxis_tickangle=45)
 
 # ***************************************
+# Diagram - Product Sales
+# ***************************************
+fig_product = px.bar(order, 
+    x='productname', y='total', 
+    color='type', text='total', title='Sales by Product',
+    hover_data=[],
+    labels={'total':'Total sales', 'productname':'Product', 'type':'Product Type'})
+fig_product.update_traces(texttemplate='%{text:.2s}', textposition='outside')
+fig_product.update_layout(uniformtext_minsize=8, uniformtext_mode='hide', xaxis_tickangle=45)
+
+
+# ***************************************
 # Activate the app
 # ***************************************
 #app = dash.Dash(__name__)
@@ -72,6 +84,11 @@ dash_app.layout = html.Div(
                                 dcc.Graph(id="sales_employee", figure=fig_employee)
                             ]
                     ),
+                    html.Div(className='eight columns div-for-charts bg-grey',
+                            children=[
+                                dcc.Graph(id="sales_product", figure=fig_product)
+                            ]
+                    ),
                 ]
             )
         ]
@@ -103,7 +120,7 @@ def update_graph(drop_month, drop_year):
             order_fig1 = order
         
     return {'data':[go.Bar(
-        x = order_fig1['productname'],
+        x = order_fig1['emp_name'],
         y = order_fig1['total']
             )
         ]
